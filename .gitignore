@@ -23,6 +23,7 @@ staticfiles/
 media/
 
 # Dependências Python geradas
+.venv
 venv/
 .env/
 .env.*
