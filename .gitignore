@@ -7,9 +7,6 @@
 *.pyd
 __pycache__
 
-# Arquivos de mídia gerados
-media/
-
 # Arquivos de banco de dados SQLite
 *.sqlite3
 
