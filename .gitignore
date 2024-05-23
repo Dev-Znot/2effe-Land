@@ -1,5 +1,5 @@
 # Arquivos de ambiente
-railway.env
+.env
 
 # Arquivos de configuração locais
 *.pyc
