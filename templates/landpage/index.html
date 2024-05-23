@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2effe Sport</title>
+    {% comment %} Css {% endcomment %}
+    <link rel="stylesheet" href="{% static 'landpage/css/styles.css' %}">
+    {% comment %} favicon {% endcomment %}
+    <link rel="shortcut icon" href="{% static 'landpage/favicon.ico' %}" type="image/x-icon">
+    {% comment %} Font awesome {% endcomment %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    {% comment %} Animations {% endcomment %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    {% comment %} JQuery {% endcomment %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <section id="hero" class="section-p1">
+
+        <img src="{% static 'landpage/img/logo.png' %}" alt="">
+        <div data-aos="zoom-in">
+            <h1><strong>Encontre seu uniforme</strong> <span class="text-alt-1">ideal</span> conosco!</h1>
+        </div>
+        <p>Clientes <i>satisfeitos</i> e que confiam na 2Effe Sport</p>
+
+    </section>
+
+    <section id="information" class="section-p1">
+
+        <img src="{% static 'landpage/img/p1.png' %}" alt="">
+
+        <div class="text-right" data-aos="fade-left">
+            <p>Na <strong>2effe Sport</strong>, transformamos sua paixão pelo esporte em vitórias memoráveis. Nossos uniformes não são apenas roupas são manifestações de excelência e orgulho. Com design meticuloso e materiais de alta qualidade, estamos aqui para elevar sua equipe ao próximo nível. Junte-se a nós e descubra como podemos tornar sua jornada esportiva ainda mais extraordinária.</p> 
+        </div>
+        
+    </section>
+    
+    <section id="product-card" class="section-p1">
+
+        <div class="text" data-aos="fade-right">
+            <h2>Alguns dos nossos Estilos</h2>
+        </div>
+        
+        <div class="slider">
+            <div class="item">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c5">
+                <label for="c5" class="card">
+                    <div class="row">
+                        <div class="icon">5</div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="text-box" class="section-p1">
+        <div class="box" data-aos="flip-left">
+            <h2>Por que escolher a 2effe?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum accusamus quia ad esse at voluptates possimus officiis sint, molestias necessitatibus ex, explicabo quod hic repellendus officia cupiditate, aut beatae. Obcaecati.</p>
+        </div>
+        <div class="box" data-aos="flip-right">
+            <h2>faça parte da nossa historia</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis error nobis neque nisi excepturi recusandae ab iste labore sed. Aliquam ipsa, consequuntur quisquam corrupti delectus similique repudiandae veniam nostrum amet.</p>
+        </div>
+    </section>
+
+    <section id="text-single" class="section-p1">
+
+        <div class="text" data-aos="fade-left">
+            <h2>Quem somos nós</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa velit voluptatem beatae tempore magnam aliquid, eligendi, sint excepturi aliquam reprehenderit accusamus maxime distinctio temporibus? Tenetur quaerat nostrum eos animi quo!</p>
+        </div>
+
+        <img src="{% static "landpage/img/background1.jpg" %}"></img>
+
+        <div class="img"><img src="{% static 'landpage/img/p2.png' %}" alt=""></div>
+
+    </section>
+
+    <section id="promo-info" class="section-p1">
+
+            <div class="container">
+                <img src="{% static 'landpage/img/p3.png' %}" alt="">
+
+                <div class="container-box">
+                    <div class="text-box">
+                        <h4>promo</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
+                    </div>
+                    <div class="text-box">
+                        <h4>promo</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
+                    </div>
+                    <div class="text-box">
+                        <h4>promo</h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section id="simulador">
+        <div class="container" data-aos="zoom-in">
+            <h2>Visite também nosso simulador e monte seu uniforme de forma pratica e rapida</h2>
+            <a href="https://www.2effesportdf.com.br/simulador/">Ir para o simulador</a>
+        </div>
+    </section>
+
+    <section id="newletter" class="section-p1">
+
+        <div class="text" data-aos="fade-right">
+            <h2>Nós entramos em contato</h2>
+        </div>
+
+        <div class="part">
+            <div class="form">
+                <form action="">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Lucas Henrique">
+                    <label for="whatsapp">whatsapp</label>
+                    <input type="text" id="whatsapp" placeholder="(11) 91001-1001">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="lucas.henrique@outlook.com">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <img src="{% static 'landpage/img/p4.png' %}" alt="">
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="col">
+            <img src="{% static 'landpage/img/logo.png' %}" alt="">
+
+            <h4>Contato</h4>
+            <p><strong>Endereço:</strong> address</p>
+            <p><strong>Telefone:</strong> (11) 91001 - 1001</p>
+            <p><strong>Aberto:</strong> 10:00 - 19:00, Seg - Sab</p>
+
+            <div class="follow">
+                <h4>Redes Sociais</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div>
+            </div>       
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024, ThZt - Html CSS Ecommerce Template</p>
+        </div>
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>   
+
+</body>
+</html>

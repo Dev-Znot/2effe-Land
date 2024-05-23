@@ -1,0 +1,54 @@
+# Arquivos de ambiente
+railway.env
+
+# Arquivos de configuração locais
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Arquivos de mídia gerados
+media/
+
+# Arquivos de banco de dados SQLite
+*.sqlite3
+
+# Arquivos de log
+*.log
+
+# Diretório de arquivos estáticos coletados
+staticfiles/
+
+# Diretório de uploads de mídia
+media/
+
+# Dependências Python geradas
+venv/
+.env/
+.env.*
+
+# Arquivos de compilação
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de backup
+*~
+
+# Arquivos de IDE
+.vscode/
+.idea/
+
+# Arquivos de configuração
+*.yml
+*.yaml
+
+# Arquivos de cache
+*.cache/
+
+# Arquivos de testes
+*.pytest_cache/
+
+# Logs do sistema
+syslog
+auth.log
