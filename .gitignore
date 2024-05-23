@@ -23,10 +23,7 @@ staticfiles/
 media/
 
 # Dependências Python geradas
-.venv/
 venv/
-.env/
-.env.*
 
 # Arquivos de compilação
 *.pyc
@@ -38,7 +35,6 @@ venv/
 
 # Arquivos de IDE
 .vscode/
-.idea/
 
 # Arquivos de configuração
 *.yml
