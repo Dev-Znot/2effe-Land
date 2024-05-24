@@ -14,7 +14,7 @@ __pycache__
 *.log
 
 # Diretório de arquivos estáticos coletados
-staticfiles/
+
 
 # Diretório de uploads de mídia
 media/
