@@ -56,7 +56,6 @@ body {
     --cor-letras-w: #fff;
 }
 
-/* Landing Page */
 
 #hero {
     height: 80vh;
@@ -201,8 +200,6 @@ body {
 #product-card .card[for="c5"] {
     background-image: url(../img/picture/f5.png);
 }
-
-
 
 #product-card .text h2 {
     color: var(--cor-letras-w);
@@ -413,9 +410,6 @@ footer .copyright {
     margin: 10px;
 }
 
-
-/* checkout */
-
 nav {
     background-color: var(--cor-destaque);
 }
@@ -428,8 +422,6 @@ nav img {
 #check {
     height: 100vh;
 }
-
-
 
 @media (max-width:799px) {
     .section-p1 {
