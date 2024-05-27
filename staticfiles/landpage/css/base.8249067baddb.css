@@ -365,6 +365,18 @@ body {
     height: auto;
 }
 
+
+#newletter .errorlist li {
+    width: 80%;
+    font-size: 14px;
+    color: var(--cor-principal);
+}
+
+#newletter .sucess-menssage {
+    color: green;
+    font-size: 20px;
+}
+
 footer {
     background-color: var(--cor-destaque);  
 }
