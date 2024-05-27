@@ -47,36 +47,46 @@
         
         <div class="slider">
             <div class="item">
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" class="card">
-                    <div class="row">
-                        <div class="icon">1</div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c2">
-                <label for="c2" class="card">
-                    <div class="row">
-                        <div class="icon">2</div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c3">
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c4">
-                <label for="c4" class="card">
-                    <div class="row">
-                        <div class="icon">4</div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c5">
-                <label for="c5" class="card">
-                    <div class="row">
-                        <div class="icon">5</div>
-                    </div>
-                </label>
+                <div class="slide">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="slide">
+                    <input type="radio" name="slide" id="c2">
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon">2</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="slide">
+                    <input type="radio" name="slide" id="c3">
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon">3</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="slide">
+                    <input type="radio" name="slide" id="c4">
+                    <label for="c4" class="card">
+                        <div class="row">
+                            <div class="icon">4</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="slide">
+                    <input type="radio" name="slide" id="c5">
+                    <label for="c5" class="card">
+                        <div class="row">
+                            <div class="icon">5</div>
+                        </div>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -112,15 +122,15 @@
                 <img src="{% static 'landpage/img/p3.png' %}" alt="">
 
                 <div class="container-box">
-                    <div class="text-box">
+                    <div class="text-box" data-aos="fade-left">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
-                    <div class="text-box">
+                    <div class="text-box" data-aos="fade-right">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
-                    <div class="text-box">
+                    <div class="text-box" data-aos="fade-left">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
@@ -144,13 +154,23 @@
 
         <div class="part">
             <div class="form">
-                <form action="">
+                <form action="{% url "land:landpage" %}" method="post">
+                    {% csrf_token %}
                     <label for="name">Nome</label>
-                    <input type="text" id="name" placeholder="Lucas Henrique">
+                    {{ form.name }}
+                    {% if form.errors.name %}
+                        {{ form.errors.name }}
+                    {% endif %}
                     <label for="whatsapp">whatsapp</label>
-                    <input type="text" id="whatsapp" placeholder="(11) 91001-1001">
+                    {{ form.whatsapp }}
+                    {% if form.errors.whatsapp %}
+                        {{ form.errors.whatsapp }}
+                    {% endif %}
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="lucas.henrique@outlook.com">
+                    {{ form.email }}
+                    {% if form.errors.email %}
+                        {{ form.errors.email }}
+                    {% endif %}
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -188,6 +208,29 @@
 
     <script>
         AOS.init();
+
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide input');
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            slides[currentIndex].checked = false; // Desmarcar o slide atual
+            currentIndex = (currentIndex + 1) % totalSlides; // Avançar para o próximo índice
+            slides[currentIndex].checked = true; // Marcar o próximo slide
+        }
+
+        setInterval(showNextSlide, 3000); // Mudar de slide a cada 3 segundos
+
+
+        window.onload = function() {
+            var form = document.getElementById('newletter');
+            if (form) {
+                var errorElements = form.querySelectorAll('.erro-menssage');
+                if (errorElements.length > 0) {
+                    form.scrollIntoView();
+                }
+            }
+        };
     </script>   
 
 </body>

@@ -1,5 +1,29 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
+
+from .models import LandModel
+from .form import LandForm
 
 
 def landpage(request):
-    return render(request, "landpage/index.html")
+    if request.method == "GET":
+        form = LandForm()
+
+        context = {
+            "form":form
+        }
+
+        return render(request, "landpage/index.html", context)
+    
+    elif request.method == "POST":
+        form = LandForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            return redirect('land:landpage')
+        else:
+            return render(request, 'landpage/index.html', {'form': form})
+        
+
+
+
