@@ -20,7 +20,8 @@ def landpage(request):
 
         if form.is_valid():
             form.save()
-            return redirect('land:landpage')
+
+            return render(request, "landpage/index.html", {"sucesso": True, 'form': form})
         else:
             return render(request, 'landpage/index.html', {'form': form})
         

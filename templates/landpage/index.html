@@ -150,6 +150,9 @@
 
         <div class="text" data-aos="fade-right">
             <h2>Nós entramos em contato</h2>
+            {% if sucesso %}
+                <p class="sucess-menssage">Formulário enviado com sucesso!</p>
+            {% endif %}
         </div>
 
         <div class="part">
@@ -226,7 +229,11 @@
             var form = document.getElementById('newletter');
             if (form) {
                 var errorElements = form.querySelectorAll('.erro-menssage');
+                var sucessElements = form.querySelectorAll('.sucess-menssage');
                 if (errorElements.length > 0) {
+                    form.scrollIntoView();
+                }
+                if (sucessElements.length > 0) {
                     form.scrollIntoView();
                 }
             }
