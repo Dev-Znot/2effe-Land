@@ -20,7 +20,10 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,django
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,django
 
-# IDE
+# Created by https://www.toptal.com/developers/gitignore/api/python,django
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,django
+
+#IDE
 .vscode
 
 ### Django ###
@@ -157,7 +160,6 @@ celerybeat.pid
 # Environments
 .env
 .venv
-env/
 venv/
 ENV/
 env.bak/
