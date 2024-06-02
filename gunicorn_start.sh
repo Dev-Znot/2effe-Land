@@ -2,8 +2,8 @@
 
 NAME="setup"                  # Nome da aplicação
 DJANGODIR=unix:\2effe-Land\setup   # Caminho para o diretório do projeto Django
-USER=Thalles                     # O usuário que vai executar o Gunicorn
-GROUP=Dragonfy                       # O grupo que vai executar o Gunicorn
+USER=zainote.pro@gmail.com                     # O usuário que vai executar o Gunicorn
+GROUP=proprietario                       # O grupo que vai executar o Gunicorn
 WORKERS=1                            # Número de processos worker do Gunicorn
 BIND=unix:/run/gunicorn.sock            # Endereço onde o Gunicorn vai escutar
 DJANGO_SETTINGS_MODULE=setup.settings  # Nome do módulo de configurações do Django
