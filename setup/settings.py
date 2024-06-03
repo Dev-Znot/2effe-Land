@@ -80,11 +80,14 @@ WSGI_APPLICATION = "setup.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": config(
-        "DATABASE_URL",
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        cast=db_url,
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME', default='nome_do_seu_banco'),
+        'USER': config('DB_USER', default='seu_usuario'),
+        'PASSWORD': config('DB_PASSWORD', default='sua_senha'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='3306'),
+    }
 }
 
 
