@@ -81,7 +81,7 @@ WSGI_APPLICATION = "setup.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mariadb',
         'NAME': config('DB_NAME', default='nome_do_seu_banco'),
         'USER': config('DB_USER', default='seu_usuario'),
         'PASSWORD': config('DB_PASSWORD', default='sua_senha'),
