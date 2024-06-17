@@ -33,7 +33,7 @@
 
         <img src="{% static 'landpage/img/p1.png' %}" alt="">
 
-        <div class="text-right" data-aos="fade-left">
+        <div class="text-right" data-aos="zoom-in">
             <p>Na <strong>2effe Sport</strong>, transformamos sua paixão pelo esporte em vitórias memoráveis. Nossos uniformes não são apenas roupas são manifestações de excelência e orgulho. Com design meticuloso e materiais de alta qualidade, estamos aqui para elevar sua equipe ao próximo nível. Junte-se a nós e descubra como podemos tornar sua jornada esportiva ainda mais extraordinária.</p> 
         </div>
         
@@ -41,52 +41,50 @@
     
     <section id="product-card" class="section-p1">
 
-        <div class="text" data-aos="fade-right">
+        <div class="text" data-aos="zoom-in">
             <h2>Alguns dos nossos Estilos</h2>
         </div>
-        
-        <div class="slider">
-            <div class="item">
-                <div class="slide">
-                    <input type="radio" name="slide" id="c1" checked>
-                    <label for="c1" class="card">
-                        <div class="row">
-                            <div class="icon">1</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="slide">
-                    <input type="radio" name="slide" id="c2">
-                    <label for="c2" class="card">
-                        <div class="row">
-                            <div class="icon">2</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="slide">
-                    <input type="radio" name="slide" id="c3">
-                    <label for="c3" class="card">
-                        <div class="row">
-                            <div class="icon">3</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="slide">
-                    <input type="radio" name="slide" id="c4">
-                    <label for="c4" class="card">
-                        <div class="row">
-                            <div class="icon">4</div>
-                        </div>
-                    </label>
-                </div>
-                <div class="slide">
-                    <input type="radio" name="slide" id="c5">
-                    <label for="c5" class="card">
-                        <div class="row">
-                            <div class="icon">5</div>
-                        </div>
-                    </label>
-                </div>
+
+        <div class="item">
+            <div class="slide">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                    </div>
+                </label>
+            </div>
+            <div class="slide">
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                    </div>
+                </label>
+            </div>
+            <div class="slide">
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                    </div>
+                </label>
+            </div>
+            <div class="slide">
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                    </div>
+                </label>
+            </div>
+            <div class="slide">
+                <input type="radio" name="slide" id="c5">
+                <label for="c5" class="card">
+                    <div class="row">
+                        <div class="icon">5</div>
+                    </div>
+                </label>
             </div>
         </div>
 
@@ -105,7 +103,7 @@
 
     <section id="text-single" class="section-p1">
 
-        <div class="text" data-aos="fade-left">
+        <div class="text" data-aos="zoom-in">
             <h2>Quem somos nós</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa velit voluptatem beatae tempore magnam aliquid, eligendi, sint excepturi aliquam reprehenderit accusamus maxime distinctio temporibus? Tenetur quaerat nostrum eos animi quo!</p>
         </div>
@@ -122,15 +120,15 @@
                 <img src="{% static 'landpage/img/p3.png' %}" alt="">
 
                 <div class="container-box">
-                    <div class="text-box" data-aos="fade-left">
+                    <div class="text-box" data-aos="zoom-in">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
-                    <div class="text-box" data-aos="fade-right">
+                    <div class="text-box" data-aos="zoom-in">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
-                    <div class="text-box" data-aos="fade-left">
+                    <div class="text-box" data-aos="zoom-in">
                         <h4>promo</h4>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum doloribus vero nisi delectus natus adipisci officiis, dolores autem, sit cupiditate labor</p>
                     </div>
@@ -148,7 +146,7 @@
 
     <section id="newletter" class="section-p1">
 
-        <div class="text" data-aos="fade-right">
+        <div class="text" data-aos="zoom-in">
             <h2>Nós entramos em contato</h2>
             {% if sucesso %}
                 <p class="sucess-menssage">Formulário enviado com sucesso!</p>
@@ -210,7 +208,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-        AOS.init();
+        AOS.init({
+            offset: 200,  // ajusta o offset
+            duration: 600, // duração das animações
+            easing: 'ease-in-out', // tipo de animação
+            once: true, // animação ocorre apenas uma vez
+            mirror: false // animação não ocorre ao fazer scroll para cima
+        });
 
         let currentIndex = 0;
         const slides = document.querySelectorAll('.slide input');
